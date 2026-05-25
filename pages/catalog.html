@@ -1,12 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Catálogo - Terrafone</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/catalog.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
 </head>
 <body>
-    <div id="site-header"></div>
-     <script src="../assets/js/header-loader.js"></script>
+
+    <header class="cabecalho">
+        <div class="marca">
+            <img src="../assets/images/terrafone-logo.png" alt="Terrafone logo" class="marca-logo">
+            <div class="marca-texto">
+                <img src="../assets/images/Terrafone_tL.svg" alt="Logo em texto Terrafone" class="marca-nome">
+                <span>Conectando causas ambientais</span>
+            </div>
+        </div>
+        <nav class="menu">
+            <a href="catalog.html" class="botao-catalogo">Catálogo</a>
+            <a href="forum.html" class="botao-forum">Fórum</a>
+            <a href="sobre.html" class="botao-sobre">Sobre nós</a>
+            <a href="login.html" class="botao-entrar">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Topo do catálogo -->
+        <div class="catalogo-topo">
+            <h1>Catálogo</h1>
+            <p>Encontre campanhas e ONGs ambientais de todo o Brasil.</p>
+        </div>
+
+        <!-- Layout principal: filtro à esquerda + cards à direita -->
+        <div class="catalogo-corpo">
+
+            <!-- Filtros na lateral esquerda -->
+            <aside class="filtros">
+                <h3>Filtrar por</h3>
+
+                <div class="filtro-grupo">
+                    <p class="filtro-titulo">Categoria</p>
+                    <button class="filtro ativo" onclick="filtrar('todos', this)">Todos</button>
+                    <button class="filtro" onclick="filtrar('agua', this)">Água</button>
+                    <button class="filtro" onclick="filtrar('saneamento', this)">Saneamento</button>
+                    <button class="filtro" onclick="filtrar('clima', this)">Clima</button>
+                </div>
+
+                <div class="filtro-grupo">
+                    <p class="filtro-titulo">Tipo</p>
+                    <button class="filtro" onclick="filtrar('campanha', this)">Campanha</button>
+                    <button class="filtro" onclick="filtrar('ong', this)">ONG</button>
+                </div>
+            </aside>
+
+            <!-- Área de cards com scroll -->
+            <div class="cards-area">
+                <div class="grade" id="grade">
+
+                    <!-- Card 1 -->
+                    <div class="card" data-tipo="agua" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-agua">Água</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Água Para Todos</h2>
+                        <p class="card-descricao">Campanha que leva água potável para comunidades rurais do Nordeste, instalando cisternas e sistemas de filtragem em 200 famílias. O projeto já impactou mais de 800 pessoas diretamente.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Ceará, NE</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card" data-tipo="saneamento" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-saneamento">Saneamento</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Esgoto Zero</h2>
+                        <p class="card-descricao">Projeto de infraestrutura para eliminar esgoto a céu aberto em bairros periféricos de São Paulo, beneficiando mais de 3.000 moradores e reduzindo doenças na região.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 São Paulo, SP</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card" data-tipo="clima" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-clima">Clima</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Plante Agora</h2>
+                        <p class="card-descricao">Reflorestamento da Mata Atlântica com espécies nativas. Já plantamos mais de 50.000 árvores em parceria com comunidades locais e escolas públicas do estado.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Rio de Janeiro, RJ</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card" data-tipo="ong" data-subtipo="ong">
+                        <div class="card-topo">
+                            <span class="tag tag-ong">ONG</span>
+                            <span class="tipo-badge">Organização</span>
+                        </div>
+                        <h2 class="card-titulo">Instituto Rio Vivo</h2>
+                        <p class="card-descricao">ONG dedicada à recuperação de rios urbanos e educação ambiental em escolas públicas do Rio de Janeiro desde 2008. Atua em mais de 40 escolas da rede municipal.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Rio de Janeiro, RJ</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card" data-tipo="agua" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-agua">Água</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Guardiões do Aquífero</h2>
+                        <p class="card-descricao">Monitoramento e proteção do Aquífero Guarani no sul do Brasil, envolvendo agricultores locais no cuidado com o lençol freático e preservação das nascentes.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Paraná, Sul</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card" data-tipo="ong" data-subtipo="ong">
+                        <div class="card-topo">
+                            <span class="tag tag-ong">ONG</span>
+                            <span class="tipo-badge">Organização</span>
+                        </div>
+                        <h2 class="card-titulo">Amazônia Conectada</h2>
+                        <p class="card-descricao">ONG que apoia comunidades ribeirinhas com acesso a tecnologia, saúde e preservação ambiental na região norte do Brasil, alcançando mais de 60 comunidades.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Manaus, AM</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="card" data-tipo="saneamento" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-saneamento">Saneamento</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Banheiro Digno</h2>
+                        <p class="card-descricao">Construção de banheiros e fossas sépticas ecológicas em assentamentos rurais do Maranhão, melhorando saúde e qualidade de vida de centenas de famílias.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Maranhão, NE</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="card" data-tipo="clima" data-subtipo="campanha">
+                        <div class="card-topo">
+                            <span class="tag tag-clima">Clima</span>
+                            <span class="tipo-badge">Campanha</span>
+                        </div>
+                        <h2 class="card-titulo">Sol Para Todos</h2>
+                        <p class="card-descricao">Instalação de painéis solares em comunidades de baixa renda, reduzindo a conta de energia e diminuindo a emissão de CO₂ em regiões com alto índice de vulnerabilidade social.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Bahia, NE</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="card" data-tipo="ong" data-subtipo="ong">
+                        <div class="card-topo">
+                            <span class="tag tag-ong">ONG</span>
+                            <span class="tipo-badge">Organização</span>
+                        </div>
+                        <h2 class="card-titulo">Terra Seca Viva</h2>
+                        <p class="card-descricao">ONG do semiárido nordestino que desenvolve tecnologias sociais de convivência com a seca e capacita agricultores familiares para garantir segurança hídrica e alimentar.</p>
+                        <div class="card-rodape">
+                            <span class="card-local">📍 Pernambuco, NE</span>
+                            <a href="#" class="card-botao">Ver mais</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 </html>

@@ -1,86 +1,90 @@
-:root {
-    --header-bg: rgba(255, 255, 255, 0.95);
-    --header-border: rgba(0, 0, 0, 0.08);
-    --header-text: #15202d;
-    --header-accent: #2979ff;
-}
-
-.top-header {
+/* Cabeçalho */
+.cabecalho {
     position: sticky;
     top: 0;
     z-index: 20;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 16px;
     width: 100%;
-    padding: 1rem 1.6rem;
-    background: var(--header-bg);
-    border-bottom: 1px solid var(--header-border);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(12px);
+    padding: 16px 24px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.top-header__brand {
+/* Marca (logo + nome) */
+.marca {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 12px;
 }
 
-.brand-logo {
+.marca-logo {
     width: 54px;
-    height: 54px;
-    object-fit: contain;
+    height: auto;
 }
 
-.brand-text {
+.marca-texto {
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 2px;
 }
 
-.brand-text strong {
-    font-size: 1.1rem;
-    color: var(--header-text);
+.marca-nome {
+    height: 20px;
 }
 
-.brand-text span {
-    font-size: 0.9rem;
+.marca-texto span {
+    font-size: 13px;
     color: #5f6771;
 }
 
-.top-header__menu {
+/* Menu de navegação */
+.menu {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.top-header__menu a {
+.menu a {
     text-decoration: none;
-    color: var(--header-text);
-    padding: 0.8rem 1rem;
-    border-radius: 999px;
-    background: rgba(41, 121, 255, 0.08);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    color: #15202d;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.top-header__menu a:hover {
-    transform: translateY(-1px);
-    background: rgba(41, 121, 255, 0.16);
+.botao-catalogo {
+    background-color: #F99C33; /* azul clarinho */
 }
 
-.button-link {
-    background: var(--header-accent);
-    color: #fff;
+.botao-forum {
+    background-color: #133DDF; /* verde clarinho */
 }
 
-.button-link:hover {
-    background: #1f62d9;
+.botao-sobre {
+    background-color: #49CD1D; /* laranja clarinho */
 }
 
-.header-error {
-    padding: 1rem;
-    color: #c0392b;
-    font-weight: 700;
+/* Botão entrar */
+.botao-entrar {
+    background-color: #e8ebf0;
+    color: white;
+    border: 1px solid #e8ebf0;
+}
+
+.botao-entrar:hover {
+    background-color: #1f62d9;
+}
+
+.botao-catalogo:hover {
+    background-color: #FFB665; /* laranja clarinho */
+}
+.botao-forum:hover {
+    background-color: #5377FF; /* azul clarinho */
+}
+.botao-sobre:hover {
+    background-color: #81FF57; /* verde clarinho */
 }

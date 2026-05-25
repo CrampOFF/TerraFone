@@ -6,49 +6,62 @@
     <title>Terrafone-Landing</title>
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header.css">
 </head>
 <body>
-    <div id="site-header"></div>
-
-    <main class="page">
-
-        <div class="page-about">
-            <div class="page-about__side">
-                <img src="assets/images/terrafone-logo.png" alt="Logo Terrafone" class="page-about__logo-image">
+   <header class="cabecalho">
+        <div class="marca">
+            <img src="assets/images/terrafone-logo.png" alt="Terrafone logo" class="marca-logo">
+            <div class="marca-texto">
+                <img src="assets/images/Terrafone_tL.svg" alt="Logo em texto Terrafone" class="marca-nome">
+                <span>Conectando causas ambientais</span>
             </div>
-            <div>
-                <div class="page-about__title">
-                    <h1>O que é o <span class="page-about__logo-wrap"><img src="assets/images/Terrafone_tL.svg" alt="Terrafone" class="page-logo"></span>?</h1>
-                </div>
-                <div class="page-about__content">
-                    <p>O Terrafone é uma plataforma digital criada para conectar pessoas, ONGs e campanhas ambientais em um único lugar. Nascemos da necessidade de dar voz a comunidades afetadas por problemas de saneamento e acesso à água, reunindo iniciativas relacionadas à água potável, saneamento básico e ação climática de forma simples e acessível.</p>
-                    <p>Chega de procurar em mil lugares. Aqui você encontra campanhas, ONGs e um espaço para trocar experiências com pessoas de todo o país que enfrentam os mesmos desafios, promovendo conscientização e engajamento em todo o Brasil.</p>
-                </div>
+        </div>
+        <nav class="menu">
+            <a href="pages/catalog.html" class="botao-catalogo">Catálogo</a>
+            <a href="pages/forum.html" class="botao-forum">Fórum</a>
+            <a href="pages/sobre_nos.html" class="botao-sobre">Sobre nós</a>
+            <a href="pages/login.html" class="botao-entrar">Entrar</a>
+        </nav>
+    </header>
+    <main>
+
+        <!-- sobre o Terrafone -->
+        <div class="sobre">
+            <div class="sobre-imagem">
+                <img src="assets/images/terrafone-logo.png" alt="Logo Terrafone">
+            </div>
+            <div class="sobre-texto">
+                <h1>O que é o <img src="assets/images/Terrafone_tL.svg" alt="Terrafone" class="logo-texto">?</h1>
+                <p>O Terrafone é uma plataforma digital criada para conectar pessoas, ONGs e campanhas ambientais em um único lugar. Nascemos da necessidade de dar voz a comunidades afetadas por problemas de saneamento e acesso à água, reunindo iniciativas relacionadas à água potável, saneamento básico e ação climática de forma simples e acessível.</p>
+                <p>Chega de procurar em mil lugares. Aqui você encontra campanhas, ONGs e um espaço para trocar experiências com pessoas de todo o país que enfrentam os mesmos desafios, promovendo conscientização e engajamento em todo o Brasil.</p>
             </div>
         </div>
 
-        <div class="OqueOferecemos">
+        <!--o que oferecemos -->
+        <div class="oferecemos">
             <h2>O que oferecemos?</h2>
-            <div class="cards-row">
-                <div class="card card--forum">
+            <div class="cards">
+                <div class="cardForum">
                     <h3>Fórum</h3>
                     <p>Conecte-se com pessoas de todo o Brasil e discuta problemas ambientais da sua região. Troque experiências, compartilhe informações e encontre quem enfrenta os mesmos desafios que você.</p>
-                    <a href="pages/forum" class="card-link">Acessar fórum</a>
+                    <img src="assets/images/forum_img.png" alt="Fórum">
                 </div>
-                <div class="card card--catalog">
+                <div class="cardCatalog">
                     <h3>Catálogo</h3>
                     <p>Explore nosso catálogo de campanhas e ONGs ambientais organizadas por tema e região. Descubra iniciativas que estão transformando comunidades e encontre formas de fazer parte dessa mudança.</p>
-                    <a href="pages/catalog" class="card-link">Ver catálogo</a>
+                    <img src="assets/images/catalog_img.png" alt="Catálogo">
                 </div>
             </div>
         </div>
 
-        <div class="page-action">
+        <!-- cadastro -->
+        <div class="cadastro">
             <p>Cadastre-se e ganhe acesso ao fórum.</p>
-            <a href="pages/cadastro" class="main-button">Cadastrar-se</a>
+            <a href="pages/cadastro.html" class="botao">Cadastrar-se</a>
         </div>
-    </main>
 
-   <script src="assets/js/header-loader.js"></script>
+    </main>
+    <script src="assets/js/header-loader.js"></script>
 </body>
 </html>
