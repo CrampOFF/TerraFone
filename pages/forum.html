@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/forum.css">
     <title>Document</title>
 </head>
 <body>
@@ -17,11 +18,245 @@
             </div>
         </div>
         <nav class="menu">
-            <a href="catalog.html" class="botao-catalogo">Catálogo</a>
-            <a href="forum.html" class="botao-forum">Fórum</a>
-            <a href="sobre_nos.html" class="botao-sobre">Sobre nós</a>
-            <a href="login.html" class="botao-entrar">Entrar</a>
+            <a href="catalog.html" class="botao-catalogo"> <strong>Catálogo</strong></a>
+            <a href="forum.html" class="botao-forum"> <strong>Fórum</strong></a>
+            <a href="sobre_nos.html" class="botao-sobre"> <strong>Sobre nós</strong></a>
+            <a href="login.html" class="botao-entrar"> <strong>Entrar</strong></a>
         </nav>
     </header>
+ 
+    <main class="forum-pagina">
+ 
+        <!-- Coluna principal -->
+        <div class="forum-centro">
+ 
+            <!-- Topo com filtros de ordenação -->
+            <div class="forum-topo">
+                <div class="forum-ordenar">
+                    <button class="ordenar-btn ativo">🔥 Quentes</button>
+                    <button class="ordenar-btn">✨ Novos</button>
+                    <button class="ordenar-btn">💬 Mais comentados</button>
+                </div>
+                <a href="nova-postagem.html" class="btn-novo-post">+ Nova postagem</a>
+            </div>
+ 
+            <!-- Lista de posts -->
+            <div class="posts-lista">
+ 
+                <!-- Post 1 -->
+                <div class="post">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">847</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-agua">Água</span>
+                            <span class="post-autor">postado por <strong>Ana Lima</strong></span>
+                            <span class="post-tempo">há 3 horas</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">Rio Tietê voltou a ter peixes após 30 anos — será que é real dessa vez?</a>
+                        </h2>
+                        <p class="post-preview">Vi a notícia hoje e fiquei chocada. Alguém tem mais informações sobre o projeto de despoluição que está sendo feito? Quero entender se é sustentável ou só uma melhora temporária...</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 312 comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Post 2 -->
+                <div class="post">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">503</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-saneamento">Saneamento</span>
+                            <span class="post-autor">postado por <strong>Carlos Menezes</strong></span>
+                            <span class="post-tempo">há 6 horas</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">Minha rua está há 2 semanas sem coleta de lixo. O que posso fazer?</a>
+                        </h2>
+                        <p class="post-preview">Moro em Recife e a situação está crítica. Já liguei para a prefeitura três vezes e nada. Alguém passou por isso e conseguiu resolver? Quero saber quais canais funcionam de verdade.</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 198 comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Post 3 -->
+                <div class="post destaque">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">2.1k</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-clima">Clima</span>
+                            <span class="badge-destaque">📌 Destaque</span>
+                            <span class="post-autor">postado por <strong>Terrafone</strong></span>
+                            <span class="post-tempo">há 1 dia</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">[MEGATHREAD] Queimadas no Centro-Oeste 2025 — atualizações e como ajudar</a>
+                        </h2>
+                        <p class="post-preview">Thread oficial para centralizar informações sobre as queimadas desta temporada. Inclui lista de ONGs aceitando doações, abrigos para animais resgatados e contatos de emergência por estado.</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 1.4k comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Post 4 -->
+                <div class="post">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">289</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-agua">Água</span>
+                            <span class="post-autor">postado por <strong>Fernanda Rocha</strong></span>
+                            <span class="post-tempo">há 9 horas</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">Instalei uma cisterna em casa e reduzi 60% do consumo de água da rua — AMA</a>
+                        </h2>
+                        <p class="post-preview">Fiz a instalação há 4 meses e os resultados superaram minhas expectativas. Estou aqui para responder perguntas sobre custo, instalação e manutenção.</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 87 comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Post 5 -->
+                <div class="post">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">174</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-clima">Clima</span>
+                            <span class="post-autor">postado por <strong>Paulo Saraiva</strong></span>
+                            <span class="post-tempo">há 12 horas</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">Qual o impacto real de uma pessoa comum na pegada de carbono do Brasil?</a>
+                        </h2>
+                        <p class="post-preview">Sempre ouço que mudanças individuais não fazem diferença e que a culpa é das grandes empresas. Mas será que é verdade? Pesquisei bastante e trouxe alguns dados interessantes para debate.</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 241 comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Post 6 -->
+                <div class="post">
+                    <div class="post-votos">
+                        <button class="voto-btn" onclick="votar(this, 'cima')">▲</button>
+                        <span class="voto-numero">92</span>
+                        <button class="voto-btn" onclick="votar(this, 'baixo')">▼</button>
+                    </div>
+                    <div class="post-corpo">
+                        <div class="post-meta">
+                            <span class="post-tag tag-saneamento">Saneamento</span>
+                            <span class="post-autor">postado por <strong>Marcia Oliveira</strong></span>
+                            <span class="post-tempo">há 1 dia</span>
+                        </div>
+                        <h2 class="post-titulo">
+                            <a href="#">Esgoto a céu aberto no bairro Jardim Esperança — precisamos de ajuda</a>
+                        </h2>
+                        <p class="post-preview">Moradores do Jardim Esperança em Fortaleza convivem com esgoto a céu aberto há mais de 5 anos. Criamos uma petição e precisamos de assinaturas e visibilidade.</p>
+                        <div class="post-rodape">
+                            <span class="post-acao">💬 56 comentários</span>
+                            <span class="post-acao">↗ Compartilhar</span>
+                            <span class="post-acao">🔖 Salvar</span>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </div>
+ 
+        <!-- Sidebar direita -->
+        <aside class="forum-sidebar">
+ 
+            <!-- Sobre o fórum -->
+            <div class="sidebar-card">
+                <div class="sidebar-topo-azul">
+                    <h3>Fórum Terrafone</h3>
+                </div>
+                <div class="sidebar-conteudo">
+                    <p>Espaço para discutir problemas ambientais, trocar experiências e encontrar soluções coletivas para questões de água, saneamento e clima.</p>
+                    <div class="sidebar-stats">
+                        <div class="stat">
+                            <strong>12.4k</strong>
+                            <span>membros</span>
+                        </div>
+                        <div class="stat">
+                            <strong>347</strong>
+                            <span>online agora</span>
+                        </div>
+                    </div>
+                    <a href="nova-postagem.html" class="btn-sidebar">+ Criar postagem</a>
+                </div>
+            </div>
+ 
+            <!-- Regras -->
+            <div class="sidebar-card">
+                <div class="sidebar-cabecalho">
+                    <h3>📋 Regras</h3>
+                </div>
+                <div class="sidebar-conteudo">
+                    <ol class="regras-lista">
+                        <li>Seja respeitoso com todos</li>
+                        <li>Conteúdo deve ser relacionado ao meio ambiente</li>
+                        <li>Não espalhe desinformação</li>
+                        <li>Cite suas fontes quando possível</li>
+                        <li>Sem spam ou autopromoção excessiva</li>
+                    </ol>
+                </div>
+            </div>
+ 
+            <!-- Tags populares -->
+            <div class="sidebar-card">
+                <div class="sidebar-cabecalho">
+                    <h3>🏷 Tópicos populares</h3>
+                </div>
+                <div class="sidebar-conteudo">
+                    <div class="tags-populares">
+                        <span class="post-tag tag-agua">Água</span>
+                        <span class="post-tag tag-saneamento">Saneamento</span>
+                        <span class="post-tag tag-clima">Clima</span>
+                        <span class="post-tag tag-ong">ONGs</span>
+                        <span class="post-tag tag-denuncia">Denúncia</span>
+                        <span class="post-tag tag-dica">Dica</span>
+                    </div>
+                </div>
+            </div>
+ 
+        </aside>
+ 
+    </main>
+
 </body>
 </html>

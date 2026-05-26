@@ -1,4 +1,7 @@
+
+
 /* Script Ativar e desativar filtros na versão mobile */
+
 
 function filtrar(tipo, botao) {
             document.querySelectorAll('.filtro').forEach(function(btn) {
@@ -16,7 +19,10 @@ function filtrar(tipo, botao) {
                 }
             });
 
+
             /* Fecha o menu de filtros no mobile após selecionar */
+
+
             fecharFiltros();
         }
 
@@ -29,6 +35,10 @@ function filtrar(tipo, botao) {
             document.getElementById('filtros').classList.remove('aberto');
             document.getElementById('fundo-escuro').classList.remove('visivel');
         }
+
+
+ /* Função para atualizar as cidades com base no estado selecionado */
+
 
             var cidades = {
         AC: ['Rio Branco', 'Cruzeiro do Sul', 'Sena Madureira', 'Tarauacá', 'Feijó'],
@@ -60,7 +70,7 @@ function filtrar(tipo, botao) {
         TO: ['Palmas', 'Araguaína', 'Gurupi', 'Porto Nacional', 'Paraíso do Tocantins']
     };
 
-    /* Função para atualizar as cidades com base no estado selecionado */
+   
  
     function atualizarCidades() {
         var estado = document.getElementById('estado').value;
