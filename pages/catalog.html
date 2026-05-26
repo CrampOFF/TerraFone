@@ -21,7 +21,7 @@
         <nav class="menu">
             <a href="catalog.html" class="botao-catalogo">Catálogo</a>
             <a href="forum.html" class="botao-forum">Fórum</a>
-            <a href="sobre.html" class="botao-sobre">Sobre nós</a>
+            <a href="sobre_nos.html" class="botao-sobre">Sobre nós</a>
             <a href="login.html" class="botao-entrar">Entrar</a>
         </nav>
     </header>
@@ -32,14 +32,65 @@
         <div class="catalogo-topo">
             <h1>Catálogo</h1>
             <p>Encontre campanhas e ONGs ambientais de todo o Brasil.</p>
+            <!-- Botão que aparece só no mobile -->
+            <button class="botao-filtros-mobile" onclick="abrirFiltros()">⚙ Filtros</button>
         </div>
+
+        <!-- Fundo escuro que aparece quando o menu de filtros abre no mobile -->
+        <div class="fundo-escuro" id="fundo-escuro" onclick="fecharFiltros()"></div>
 
         <!-- Layout principal: filtro à esquerda + cards à direita -->
         <div class="catalogo-corpo">
 
             <!-- Filtros na lateral esquerda -->
-            <aside class="filtros">
+            <aside class="filtros" id="filtros">
+                <!-- Botão fechar só aparece no mobile -->
+                <button class="fechar-filtros" onclick="fecharFiltros()">✕ Fechar</button>
                 <h3>Filtrar por</h3>
+
+                <div class="campo-linha">
+    <div class="campo">
+        <label for="estado">Estado</label>
+        <select id="estado" onchange="atualizarCidades()">
+            <option value="">Selecione...</option>
+            <option value="AC">AC - Acre</option>
+            <option value="AL">AL - Alagoas</option>
+            <option value="AM">AM - Amazonas</option>
+            <option value="AP">AP - Amapá</option>
+            <option value="BA">BA - Bahia</option>
+            <option value="CE">CE - Ceará</option>
+            <option value="DF">DF - Distrito Federal</option>
+            <option value="ES">ES - Espírito Santo</option>
+            <option value="GO">GO - Goiás</option>
+            <option value="MA">MA - Maranhão</option>
+            <option value="MG">MG - Minas Gerais</option>
+            <option value="MS">MS - Mato Grosso do Sul</option>
+            <option value="MT">MT - Mato Grosso</option>
+            <option value="PA">PA - Pará</option>
+            <option value="PB">PB - Paraíba</option>
+            <option value="PE">PE - Pernambuco</option>
+            <option value="PI">PI - Piauí</option>
+            <option value="PR">PR - Paraná</option>
+            <option value="RJ">RJ - Rio de Janeiro</option>
+            <option value="RN">RN - Rio Grande do Norte</option>
+            <option value="RO">RO - Rondônia</option>
+            <option value="RR">RR - Roraima</option>
+            <option value="RS">RS - Rio Grande do Sul</option>
+            <option value="SC">SC - Santa Catarina</option>
+            <option value="SE">SE - Sergipe</option>
+            <option value="SP">SP - São Paulo</option>
+            <option value="TO">TO - Tocantins</option>
+        </select>
+    </div>
+ 
+    <div class="campo">
+        <label for="cidade">Cidade</label>
+        <select id="cidade" disabled>
+            <option value="">Selecione o estado primeiro</option>
+        </select>
+    </div>
+</div>
+
 
                 <div class="filtro-grupo">
                     <p class="filtro-titulo">Categoria</p>
@@ -191,6 +242,8 @@
 
         </div>
     </main>
+
+    <script src="../assets/js/catalog.js"></script>
 
 </body>
 </html>

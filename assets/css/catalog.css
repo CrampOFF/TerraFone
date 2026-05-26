@@ -1,7 +1,7 @@
 /* Topo do catálogo */
 .catalogo-topo {
     background-color: #F99C33;
-    padding: 32px 40px;
+    padding: 2px 40px;
 }
 
 .catalogo-topo h1 {
@@ -181,4 +181,142 @@
 .tag-ong {
     background-color: #fce4ec;
     color: #c0004a;
+}
+
+              .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+ 
+        .campo label {
+            font-size: 12px;
+            font-weight: bold;
+            color: #888;
+            text-transform: uppercase;
+        }
+ 
+        .campo select {
+            padding: 9px 12px;
+            border: 2px solid #F99C33;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #15202d;
+            background-color: white;
+            width: 100%;
+            cursor: pointer;
+        }
+ 
+        .campo select:focus {
+            outline: none;
+            background-color: #fff7ee;
+        }
+ 
+        .campo select:disabled {
+            background-color: #f0f0f0;
+            border-color: #ccc;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+
+/* ===== MOBILE ===== */
+
+/* Botão de abrir filtros - escondido no desktop */
+.botao-filtros-mobile {
+    display: none;
+}
+
+/* Botão de fechar dentro do painel - escondido no desktop */
+.fechar-filtros {
+    display: none;
+}
+
+/* Fundo escuro atrás do painel de filtros */
+.fundo-escuro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.fundo-escuro.visivel {
+    display: block;
+}
+
+@media (max-width: 700px) {
+
+    /* Topo */
+    .catalogo-topo {
+        padding: 2px 20px;
+    }
+
+    .catalogo-topo h1 {
+        font-size: 24px;
+    }
+
+    /* Botão de filtros aparece no mobile */
+    .botao-filtros-mobile {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 8px 16px;
+        background-color: white;
+        color: #F99C33;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Layout vira coluna */
+    .catalogo-corpo {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Filtros viram um painel deslizante pela esquerda */
+    .filtros {
+        position: fixed;
+        top: 0;
+        left: -280px; /* escondido fora da tela */
+        width: 260px;
+        height: 100%;
+        z-index: 20;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        border-right: 2px solid #F99C33;
+    }
+
+    /* Quando aberto */
+    .filtros.aberto {
+        left: 0;
+    }
+
+    /* Botão fechar aparece no mobile */
+    .fechar-filtros {
+        display: block;
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 14px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+
+    /* Cards viram 1 coluna */
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-area {
+        padding: 20px;
+        overflow-y: unset;
+    }
 }
