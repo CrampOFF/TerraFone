@@ -14,7 +14,7 @@ input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .container_login {
@@ -26,30 +26,19 @@ input {
     height: 400px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
-.container_login button {
+button {
     justify-content: center;
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     
-    
-    
-}
-.container_login button:hover {
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
     
     
 }
@@ -81,30 +70,21 @@ input {
     height: 500px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
 }
-.container_cadastro button {
+
+    
+ button:hover {
     justify-content: center;
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
     border: none;
-    border-radius: 5px;
-    
-    
-}
-.container_cadastro button:hover {
-    justify-content: center;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    
+    border-radius: 6px;
+    background-color: #5377FF;
     
 }
 

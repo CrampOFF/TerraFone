@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/catalog.css">
     <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
     <span></span>
 </button>
 
-<!-- Menu dropdown mobile -->
+<!-- Menu dropdown para o mobile -->
 <nav class="menu-dropdown" id="menuDropdown">
     <a href="catalog.html" class="botao-catalogo"><strong>Catálogo</strong></a>
     <a href="forum.html" class="botao-forum"><strong>Fórum</strong></a>
@@ -45,11 +46,11 @@
         <div class="catalogo-topo">
             <h1>Catálogo</h1>
             <p>Encontre campanhas e ONGs ambientais de todo o Brasil.</p>
-            <!-- Botão que aparece só no mobile -->
+            <!-- Botão para mobile -->
             <button class="botao-filtros-mobile" onclick="abrirFiltros()">⚙ Filtros</button>
         </div>
 
-        <!-- Fundo escuro que aparece quando o menu de filtros abre no mobile -->
+        <!-- Escurece o corpo da pagina -->
         <div class="fundo-escuro" id="fundo-escuro" onclick="fecharFiltros()"></div>
 
         <!-- Layout principal: filtro à esquerda + cards à direita -->
@@ -124,6 +125,7 @@
             <div class="cards-area">
                 <div class="grade" id="grade">
 
+                <!-- REMOVER QUANDO FOR FAZER O SITE SER FUNCIONAL -->
                     <!-- Card 1 -->
                     <div class="card" data-tipo="agua" data-subtipo="campanha">
                         <div class="card-topo">
