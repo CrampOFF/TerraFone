@@ -48,6 +48,7 @@
     border-radius: 8px;
     position: relative;
     color: white;
+    overflow: hidden; /* para garantir que a imagem não ultrapasse os limites do card */
 }
 .cardCatalog{
     flex: 1;
@@ -56,6 +57,7 @@
     border-radius: 8px; 
     position: relative;
     color: white;
+    overflow: hidden; /* para garantir que a imagem não ultrapasse os limites do card */
 }
 .cardCatalog img {
     position: absolute; /* a imagem sai do fluxo normal */
@@ -73,6 +75,12 @@
     width: 200px;
     opacity: 0.15; /* deixa a imagem mais apagada pro texto aparecer */
     z-index: 0; /* fica atrás */
+}
+.cardForum p h3, .cardCatalog p h3 {
+    position: relative; /* para ficar acima da imagem */
+    z-index: 1;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 /* Botão */
@@ -96,3 +104,19 @@
     font-size: 18px;
     margin-bottom: 16px;
 }
+
+@media(max-width: 768px) {
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .cards {
+        flex-direction: column;
+    }
+
+}
+
